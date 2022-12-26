@@ -1,7 +1,5 @@
 /*
 	File: project1.c
-	Aim: To use self modifying code to copy nt api code to user mode code section and execute it avoiding breakpoints.
-		Use PEB and export table to get base address for ntdll and base address of API
 
 */
 
@@ -27,8 +25,8 @@ int main(int argc, char** argv){
 	size_t LenModuleName = wcslen(ModuleNameToFind);   						  //sizeof(ModuleNameToFind)/sizeof(wchar_t);
 	
 	ReturnedDllBase = DllModuleBaseFinder_(ModuleNameToFind, 
-											LenModuleName
-											);	
+						LenModuleName
+						);	
 	printf("ntdll.dll Base: %p\n",ReturnedDllBase);												
 																									
 	/*Find the base address of the NtApi*/
