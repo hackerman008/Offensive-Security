@@ -1,7 +1,3 @@
-/*
-	File: project1.c
-
-*/
 
 #include <stdio.h>
 #include <stdlib.h>
